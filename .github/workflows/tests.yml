@@ -12,25 +12,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: root_password
-          MYSQL_DATABASE: TweetHubDB
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout do Código
+      uses: actions/checkout@v2
 
     - name: Configurar Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: 18.
+        node-version: '14'
 
-    - name: Executar install e test
-      run: |
-        npm install
-        npm run test
+    - name: Instalar Dependências
+      run: npm install
+
+    - name: Executar Testes
+      run: npm test
