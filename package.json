@@ -1,0 +1,27 @@
+{
+  "name": "tweethub",
+  "version": "1.0.0",
+  "description": "Aplicação simples de microblogging inspirada no Twitter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profrafaellamatos/TweetHub.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/profrafaellamatos/TweetHub/issues"
+  },
+  "homepage": "https://github.com/profrafaellamatos/TweetHub#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.6.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
