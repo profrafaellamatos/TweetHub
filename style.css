@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+h1{
+    color: #3c20db;
+}
+
 .container {
     background-color: white;
     padding: 20px;

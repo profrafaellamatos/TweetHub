@@ -1,3 +1,5 @@
+// frontend/script.js
+
 document.addEventListener('DOMContentLoaded', () => {
     const postForm = document.getElementById('postForm');
     const postContent = document.getElementById('postContent');
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   
       if (content.length > 200) {
-        showError('A mensagem não pode ter mais de 200 caracteres.');
+        showError('A mensagem não pode ter mais de 200 caract   eres.');
         return;
       }
   
@@ -27,6 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
   
     function showError(message) {
       errorDiv.textContent = message;
+    }
+  
+    // Exportar a função showError para testes
+    if (typeof module !== 'undefined' && module.exports) {
+      module.exports = { showError };
     }
   });
   
