@@ -20,6 +20,8 @@ db.connect((err) => {
   }
 });
 
+//linha adicional aqui
+
 app.use(express.json());
 
 // Rotas aqui...
