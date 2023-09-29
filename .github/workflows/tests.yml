@@ -2,11 +2,11 @@ name: Testes Automatizados (CRUD Posts)
 
 on: 
   push:
+    branches:
+        - main
+    pull_request:
       branches:
         - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   test:
@@ -25,4 +25,4 @@ jobs:
       run: npm install
 
     - name: Executar Testes
-      run: npm test
+      run: npm run test
